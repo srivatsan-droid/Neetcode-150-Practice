@@ -1,3 +1,7 @@
+package com.DSA.SlidingWindow;
+
+import java.util.HashMap;
+
 class LongestRepeatingCharacter {
     public int characterReplacement(String s, int k) {
         HashMap<Character,Integer> map = new HashMap<>();
