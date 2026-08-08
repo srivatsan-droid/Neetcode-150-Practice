@@ -1,9 +1,9 @@
 package com.DSA.Revision.TwoPointers;
 
 public class TwoSumII {
-    public static int[] twoSumOptimized(int nums[],int target) {
+    public static int[] twoSum(int nums[],int target) {
         int left = 0,right = nums.length-1;
-        while(left < right) {
+        while(left <= right) {
             int sum = nums[left] + nums[right];
             if(sum == target) {
                 return new int[] {left+1,right+1};
@@ -15,12 +15,12 @@ public class TwoSumII {
                 right--;
             }
         }
-        return new int[] {-1,-1};
+        return new int[]{-1,-1};
     }
     public static void main(String[] args) {
-        int nums[] = {-1,0};
-        int target = -1;
-        int ans[] = twoSumOptimized(nums,target);
+        int num[] = {2,7,11,15};
+        int target = 9;
+        int ans[] = twoSum(num,target);
         for(int i = 0;i < ans.length;i++) {
             System.out.println(ans[i] + " ");
         }

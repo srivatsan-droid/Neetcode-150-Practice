@@ -1,32 +1,24 @@
 package com.DSA.Revision.TwoPointers;
 
 public class MergeStringsAlternatively {
-
-    public static String mergeString(String word1, String word2) {
-        StringBuilder ans = new StringBuilder();
+    public static String merge(String a,String b) {
+        StringBuilder sb = new StringBuilder();
         int i = 0;
-
-        while (i < word1.length() || i < word2.length()) {
-
-            if (i < word1.length()) {
-                ans.append(word1.charAt(i));
+        while(i < a.length() || i < b.length()) {
+            if(i < a.length()) {
+                sb.append(a.charAt(i));
             }
-
-            if (i < word2.length()) {
-                ans.append(word2.charAt(i));
+            if(i < b.length()) {
+                sb.append(b.charAt(i));
             }
-
             i++;
         }
-
-        return ans.toString();
+        return sb.toString();
     }
-
     public static void main(String[] args) {
-        String word1 = "abc";
-        String word2 = "pqr";
-
-        String ans = mergeString(word1, word2);
+        String s = "abc";
+        String t = "def";
+        String ans = merge(s,t);
         System.out.println(ans);
     }
 }
