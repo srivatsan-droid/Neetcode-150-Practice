@@ -1,35 +1,37 @@
 package com.DSA.SlidingWindow;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class BestTimeToBuySellStock {
-    public static int bruteForce(int nums[]){
-        int maxProfit = 0;
+    public static int maxProfit(int nums[]) {
+        int max = 0,profit = 0;
         for(int i = 0;i < nums.length;i++) {
             for(int j = i + 1;j < nums.length;j++) {
                 if(nums[i] < nums[j]) {
-                    int profit = nums[j] - nums[i];
-                    maxProfit = Math.max(maxProfit,profit);
+                    profit = nums[j] - nums[i];
                 }
+                max = Math.max(max,profit);
             }
         }
-        return maxProfit;
+        return max;
     }
-    public static int optimized(int nums[]) {
+    public static int maxOptimized(int nums[]) {
         int left = 0;
-        int maxProfit = 0;
-        for(int right = 1;right < nums.length;right++) {
+        int max = 0;
+        for(int right = 0;right < nums.length;right++) {
             if(nums[left] < nums[right]) {
-                nums[left] = nums[right];
+                left = right;
             }
             else {
-                maxProfit = Math.max(maxProfit,nums[right] - nums[left]);
+                max = Math.max(max,nums[right] - nums[left]);
             }
-            right++;
         }
-        return maxProfit;
+        return max;
     }
     public static void main(String[] args) {
         int nums[] = {7,6,4,3,1};
-        int ans = optimized(nums);
+        int ans = maxOptimized(nums);
         System.out.println(ans);
     }
 }
