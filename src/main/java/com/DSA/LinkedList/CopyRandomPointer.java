@@ -2,15 +2,6 @@ package com.DSA.LinkedList;
 
 import java.util.HashMap;
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode random;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
 public class CopyRandomPointer {
     public static ListNode copyRandom(ListNode head) {
         HashMap<ListNode,ListNode> map = new HashMap<>();

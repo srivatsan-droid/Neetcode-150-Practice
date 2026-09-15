@@ -1,5 +1,7 @@
 package com.DSA;
 
+import com.DSA.LinkedList.ListNode;
+
 public class ReverseNodeKGroup {
     public static ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) return null;
