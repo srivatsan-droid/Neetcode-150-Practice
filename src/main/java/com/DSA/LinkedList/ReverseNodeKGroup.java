@@ -1,6 +1,4 @@
-package com.DSA;
-
-import com.DSA.LinkedList.ListNode;
+package com.DSA.LinkedList;
 
 public class ReverseNodeKGroup {
     public static ListNode reverseKGroup(ListNode head, int k) {

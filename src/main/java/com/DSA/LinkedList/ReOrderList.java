@@ -1,10 +1,10 @@
 package com.DSA.LinkedList;
 
 public class ReOrderList {
-    public static void reOrder(Node head) {
+    public static void reOrder(Node1 head) {
         //Find Middle of the list
-        Node slow = head;
-        Node fast = head.next;
+        Node1 slow = head;
+        Node1 fast = head.next;
         while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;

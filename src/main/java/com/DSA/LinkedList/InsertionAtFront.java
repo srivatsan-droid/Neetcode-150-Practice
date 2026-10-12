@@ -1,8 +1,8 @@
 package com.DSA.LinkedList;
 
 public class InsertionAtFront {
-    public static Node insertFront(Node head,int x) {
-        Node newNode = new Node(x);
+    public static Node1 insertFront(Node1 head, int x) {
+        Node1 newNode = new Node1(x);
         newNode.next = head;
         return newNode;
     }

@@ -1,16 +1,16 @@
 package com.DSA.LinkedList;
 
 public class MiddleLinkedList {
-    public static Node middle(Node head) {
-        Node slow = head;
-        Node fast = head;
+    public static Node1 middle(Node1 head) {
+        Node1 slow = head;
+        Node1 fast = head;
         while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
         return slow;
     }
-    public static void printList(Node head) {
+    public static void printList(Node1 head) {
         Node temp = head;
         while(temp != null) {
             System.out.println(temp.data);

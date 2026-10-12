@@ -1,7 +1,7 @@
 package com.DSA.LinkedList;
 class Node {
     int data;
-    Node next;
+    Node1 next;
 
     public Node(int data) {
         this.data = data;

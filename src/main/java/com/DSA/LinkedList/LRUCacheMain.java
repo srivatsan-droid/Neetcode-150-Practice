@@ -1,14 +1,14 @@
-package com.DSA;
+package com.DSA.LinkedList;
 
 import java.util.*;
 
-class Node {
+class Node1 {
     int key;
     int value;
-    Node prev;
-    Node next;
+    Node1 prev;
+    Node1 next;
 
-    Node(int key, int value) {
+    Node1(int key, int value) {
         this.key = key;
         this.value = value;
     }
@@ -16,9 +16,9 @@ class Node {
 
 class LRUCache {
 
-    HashMap<Integer, Node> map;
-    Node head;
-    Node tail;
+    HashMap<Integer, Node1> map;
+    Node1 head;
+    Node1 tail;
     int capacity;
 
     public LRUCache(int capacity) {
@@ -26,17 +26,17 @@ class LRUCache {
 
         map = new HashMap<>();
 
-        head = new Node(0, 0);
-        tail = new Node(0, 0);
+        head = new Node1(0, 0);
+        tail = new Node1(0, 0);
 
         head.next = tail;
         tail.prev = head;
     }
 
     // Add node just before tail
-    private void addNode(Node node) {
+    private void addNode(Node1 node) {
 
-        Node previous = tail.prev;
+        Node1 previous = tail.prev;
 
         previous.next = node;
         node.prev = previous;
@@ -46,10 +46,10 @@ class LRUCache {
     }
 
     // Remove a node from the linked list
-    private void removeNode(Node node) {
+    private void removeNode(Node1 node) {
 
-        Node previous = node.prev;
-        Node next = node.next;
+        Node1 previous = node.prev;
+        Node1 next = node.next;
 
         previous.next = next;
         next.prev = previous;
@@ -63,7 +63,7 @@ class LRUCache {
         }
 
         // Get the node from HashMap
-        Node node = map.get(key);
+        Node1 node = map.get(key);
 
         // Move it to most recently used position
         removeNode(node);
@@ -77,7 +77,7 @@ class LRUCache {
         // Key already exists
         if (map.containsKey(key)) {
 
-            Node node = map.get(key);
+            Node1 node = map.get(key);
 
             // Update value
             node.value = value;
@@ -90,7 +90,7 @@ class LRUCache {
         }
 
         // Key doesn't exist, create new node
-        Node node = new Node(key, value);
+        Node1 node = new Node1(key, value);
 
         // Add to HashMap
         map.put(key, node);
@@ -102,7 +102,7 @@ class LRUCache {
         if (map.size() > capacity) {
 
             // First node after head is LRU
-            Node lru = head.next;
+            Node1 lru = head.next;
 
             // Remove from linked list
             removeNode(lru);

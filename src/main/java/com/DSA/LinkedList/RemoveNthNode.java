@@ -1,7 +1,7 @@
 package com.DSA.LinkedList;
 
 public class RemoveNthNode {
-    public static Node RemoveNode(Node head,int n) {
+    public static Node1 RemoveNode(Node1 head, int n) {
         Node slow = head,fast = head;
         for(int i = 0;i < n;i++) {
             fast = fast.next;

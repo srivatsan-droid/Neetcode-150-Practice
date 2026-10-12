@@ -1,10 +1,10 @@
 package com.DSA.LinkedList;
 
 public class ReverseLinkedListII {
-    public static Node reverseBetween(Node head, int left, int right) {
+    public static Node1 reverseBetween(Node1 head, int left, int right) {
 
         // Dummy node helps when left = 1
-        Node dummy = new Node(0);
+        Node1 dummy = new Node1(0);
         dummy.next = head;
 
         // Move prev to the node just before 'left'
